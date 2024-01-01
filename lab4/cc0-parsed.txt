@@ -1,0 +1,112 @@
+    0:d=0  hl=4 l=1771 cons: SEQUENCE          
+    4:d=1  hl=4 l=1491 cons:  SEQUENCE          
+    8:d=2  hl=2 l=   3 cons:   cont [ 0 ]        
+   10:d=3  hl=2 l=   1 prim:    INTEGER           :02
+   13:d=2  hl=2 l=  16 prim:   INTEGER           :79EBF244C9CDE48F16E5B3F3091EFEF9
+   31:d=2  hl=2 l=  13 cons:   SEQUENCE          
+   33:d=3  hl=2 l=   9 prim:    OBJECT            :sha256WithRSAEncryption
+   44:d=3  hl=2 l=   0 prim:    NULL              
+   46:d=2  hl=2 l= 118 cons:   SEQUENCE          
+   48:d=3  hl=2 l=  11 cons:    SET               
+   50:d=4  hl=2 l=   9 cons:     SEQUENCE          
+   52:d=5  hl=2 l=   3 prim:      OBJECT            :countryName
+   57:d=5  hl=2 l=   2 prim:      PRINTABLESTRING   :US
+   61:d=3  hl=2 l=  11 cons:    SET               
+   63:d=4  hl=2 l=   9 cons:     SEQUENCE          
+   65:d=5  hl=2 l=   3 prim:      OBJECT            :stateOrProvinceName
+   70:d=5  hl=2 l=   2 prim:      PRINTABLESTRING   :MI
+   74:d=3  hl=2 l=  18 cons:    SET               
+   76:d=4  hl=2 l=  16 cons:     SEQUENCE          
+   78:d=5  hl=2 l=   3 prim:      OBJECT            :localityName
+   83:d=5  hl=2 l=   9 prim:      PRINTABLESTRING   :Ann Arbor
+   94:d=3  hl=2 l=  18 cons:    SET               
+   96:d=4  hl=2 l=  16 cons:     SEQUENCE          
+   98:d=5  hl=2 l=   3 prim:      OBJECT            :organizationName
+  103:d=5  hl=2 l=   9 prim:      PRINTABLESTRING   :Internet2
+  114:d=3  hl=2 l=  17 cons:    SET               
+  116:d=4  hl=2 l=  15 cons:     SEQUENCE          
+  118:d=5  hl=2 l=   3 prim:      OBJECT            :organizationalUnitName
+  123:d=5  hl=2 l=   8 prim:      PRINTABLESTRING   :InCommon
+  133:d=3  hl=2 l=  31 cons:    SET               
+  135:d=4  hl=2 l=  29 cons:     SEQUENCE          
+  137:d=5  hl=2 l=   3 prim:      OBJECT            :commonName
+  142:d=5  hl=2 l=  22 prim:      PRINTABLESTRING   :InCommon RSA Server CA
+  166:d=2  hl=2 l=  30 cons:   SEQUENCE          
+  168:d=3  hl=2 l=  13 prim:    UTCTIME           :200602000000Z
+  183:d=3  hl=2 l=  13 prim:    UTCTIME           :220602235959Z
+  198:d=2  hl=3 l= 167 cons:   SEQUENCE          
+  201:d=3  hl=2 l=  11 cons:    SET               
+  203:d=4  hl=2 l=   9 cons:     SEQUENCE          
+  205:d=5  hl=2 l=   3 prim:      OBJECT            :countryName
+  210:d=5  hl=2 l=   2 prim:      PRINTABLESTRING   :US
+  214:d=3  hl=2 l=  14 cons:    SET               
+  216:d=4  hl=2 l=  12 cons:     SEQUENCE          
+  218:d=5  hl=2 l=   3 prim:      OBJECT            :postalCode
+  223:d=5  hl=2 l=   5 prim:      PRINTABLESTRING   :85721
+  230:d=3  hl=2 l=  16 cons:    SET               
+  232:d=4  hl=2 l=  14 cons:     SEQUENCE          
+  234:d=5  hl=2 l=   3 prim:      OBJECT            :stateOrProvinceName
+  239:d=5  hl=2 l=   7 prim:      PRINTABLESTRING   :Arizona
+  248:d=3  hl=2 l=  15 cons:    SET               
+  250:d=4  hl=2 l=  13 cons:     SEQUENCE          
+  252:d=5  hl=2 l=   3 prim:      OBJECT            :localityName
+  257:d=5  hl=2 l=   6 prim:      PRINTABLESTRING   :Tucson
+  265:d=3  hl=2 l=  28 cons:    SET               
+  267:d=4  hl=2 l=  26 cons:     SEQUENCE          
+  269:d=5  hl=2 l=   3 prim:      OBJECT            :streetAddress
+  274:d=5  hl=2 l=  19 prim:      PRINTABLESTRING   :1077 N Highland Ave
+  295:d=3  hl=2 l=  34 cons:    SET               
+  297:d=4  hl=2 l=  32 cons:     SEQUENCE          
+  299:d=5  hl=2 l=   3 prim:      OBJECT            :organizationName
+  304:d=5  hl=2 l=  25 prim:      PRINTABLESTRING   :The University of Arizona
+  331:d=3  hl=2 l=  13 cons:    SET               
+  333:d=4  hl=2 l=  11 cons:     SEQUENCE          
+  335:d=5  hl=2 l=   3 prim:      OBJECT            :organizationalUnitName
+  340:d=5  hl=2 l=   4 prim:      PRINTABLESTRING   :UITS
+  346:d=3  hl=2 l=  20 cons:    SET               
+  348:d=4  hl=2 l=  18 cons:     SEQUENCE          
+  350:d=5  hl=2 l=   3 prim:      OBJECT            :commonName
+  355:d=5  hl=2 l=  11 prim:      PRINTABLESTRING   :arizona.edu
+  368:d=2  hl=4 l= 290 cons:   SEQUENCE          
+  372:d=3  hl=2 l=  13 cons:    SEQUENCE          
+  374:d=4  hl=2 l=   9 prim:     OBJECT            :rsaEncryption
+  385:d=4  hl=2 l=   0 prim:     NULL              
+  387:d=3  hl=4 l= 271 prim:    BIT STRING        
+  662:d=2  hl=4 l= 833 cons:   cont [ 3 ]        
+  666:d=3  hl=4 l= 829 cons:    SEQUENCE          
+  670:d=4  hl=2 l=  31 cons:     SEQUENCE          
+  672:d=5  hl=2 l=   3 prim:      OBJECT            :X509v3 Authority Key Identifier
+  677:d=5  hl=2 l=  24 prim:      OCTET STRING      [HEX DUMP]:301680141E05A3778F6C96E25B874BA6B486AC71000CE738
+  703:d=4  hl=2 l=  29 cons:     SEQUENCE          
+  705:d=5  hl=2 l=   3 prim:      OBJECT            :X509v3 Subject Key Identifier
+  710:d=5  hl=2 l=  22 prim:      OCTET STRING      [HEX DUMP]:04147950EAAEE1FF891C9804DD46B91E3EAD72CFE400
+  734:d=4  hl=2 l=  14 cons:     SEQUENCE          
+  736:d=5  hl=2 l=   3 prim:      OBJECT            :X509v3 Key Usage
+  741:d=5  hl=2 l=   1 prim:      BOOLEAN           :255
+  744:d=5  hl=2 l=   4 prim:      OCTET STRING      [HEX DUMP]:030205A0
+  750:d=4  hl=2 l=  12 cons:     SEQUENCE          
+  752:d=5  hl=2 l=   3 prim:      OBJECT            :X509v3 Basic Constraints
+  757:d=5  hl=2 l=   1 prim:      BOOLEAN           :255
+  760:d=5  hl=2 l=   2 prim:      OCTET STRING      [HEX DUMP]:3000
+  764:d=4  hl=2 l=  29 cons:     SEQUENCE          
+  766:d=5  hl=2 l=   3 prim:      OBJECT            :X509v3 Extended Key Usage
+  771:d=5  hl=2 l=  22 prim:      OCTET STRING      [HEX DUMP]:301406082B0601050507030106082B06010505070302
+  795:d=4  hl=2 l= 103 cons:     SEQUENCE          
+  797:d=5  hl=2 l=   3 prim:      OBJECT            :X509v3 Certificate Policies
+  802:d=5  hl=2 l=  96 prim:      OCTET STRING      [HEX DUMP]:305E3052060C2B06010401AE2301040301013042304006082B06010505070201163468747470733A2F2F7777772E696E636F6D6D6F6E2E6F72672F636572742F7265706F7369746F72792F6370735F73736C2E7064663008060667810C010202
+  900:d=4  hl=2 l=  68 cons:     SEQUENCE          
+  902:d=5  hl=2 l=   3 prim:      OBJECT            :X509v3 CRL Distribution Points
+  907:d=5  hl=2 l=  61 prim:      OCTET STRING      [HEX DUMP]:303B3039A037A0358633687474703A2F2F63726C2E696E636F6D6D6F6E2D7273612E6F72672F496E436F6D6D6F6E52534153657276657243412E63726C
+  970:d=4  hl=2 l= 117 cons:     SEQUENCE          
+  972:d=5  hl=2 l=   8 prim:      OBJECT            :Authority Information Access
+  982:d=5  hl=2 l= 105 prim:      OCTET STRING      [HEX DUMP]:3067303E06082B060105050730028632687474703A2F2F6372742E7573657274727573742E636F6D2F496E436F6D6D6F6E52534153657276657243415F322E637274302506082B060105050730018619687474703A2F2F6F6373702E7573657274727573742E636F6D
+ 1089:d=4  hl=2 l=  22 cons:     SEQUENCE          
+ 1091:d=5  hl=2 l=   3 prim:      OBJECT            :X509v3 Subject Alternative Name
+ 1096:d=5  hl=2 l=  15 prim:      OCTET STRING      [HEX DUMP]:300D820B6172697A6F6E612E656475
+ 1113:d=4  hl=4 l= 382 cons:     SEQUENCE          
+ 1117:d=5  hl=2 l=  10 prim:      OBJECT            :CT Precertificate SCTs
+ 1129:d=5  hl=4 l= 366 prim:      OCTET STRING      [HEX DUMP]:0482016A016800760046A555EB75FA912030B5A28969F4F37D112C4174BEFD49B885ABF2FC70FE6D470000017275A6DC49000004030047304502210080F523EC0DF526321B7329991016948CA8859465477BC24DC76F335ADB0BC7FB02203266B4A64AEAF33C13A67FEF25B76BC2C9CEE03A96C23EED0B9E078452B34A76007600DFA55EAB68824F1F6CADEEB85F4E3E5AEACDA212A46A5E8E3B12C020445C2A730000017275A6DC820000040300473045022100C77C9B4D8AB79DA633C4A54C80A480DB34F71192236BC50122A88B29B4F2084702201E95FEB0132C69FBA397CBB13E6865AD26A561207F739D5836E7F792E8F09CB50076006F5376AC31F03119D89900A45115FF77151C11D902C10029068DB2089A37D9130000017275A6DC420000040300473045022100DF6CB89A08ED1C4B6A2DE2D2847958C53696DA45A24C639FD6505D031E8845C2022062ADDCCC7A4FAF964016BB5F09C14BF3DA40DC4A8A07E450D279D9A298853275
+ 1499:d=1  hl=2 l=  13 cons:  SEQUENCE          
+ 1501:d=2  hl=2 l=   9 prim:   OBJECT            :sha256WithRSAEncryption
+ 1512:d=2  hl=2 l=   0 prim:   NULL              
+ 1514:d=1  hl=4 l= 257 prim:  BIT STRING        

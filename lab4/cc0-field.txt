@@ -1,0 +1,115 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            79:eb:f2:44:c9:cd:e4:8f:16:e5:b3:f3:09:1e:fe:f9
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = US, ST = MI, L = Ann Arbor, O = Internet2, OU = InCommon, CN = InCommon RSA Server CA
+        Validity
+            Not Before: Jun  2 00:00:00 2020 GMT
+            Not After : Jun  2 23:59:59 2022 GMT
+        Subject: C = US, postalCode = 85721, ST = Arizona, L = Tucson, street = 1077 N Highland Ave, O = The University of Arizona, OU = UITS, CN = arizona.edu
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:ac:0c:f5:48:61:9b:14:f2:e2:e8:d6:72:35:a5:
+                    4a:0d:69:c4:02:b6:6e:ae:0e:b3:24:44:d7:c4:3e:
+                    c6:67:f6:1f:60:7c:09:0a:2c:74:d8:0b:b7:e5:1e:
+                    c5:32:5d:d2:8f:ce:2d:58:c5:a9:fb:57:d5:2e:b4:
+                    03:55:24:31:57:99:83:27:30:c9:08:30:9c:c8:8c:
+                    6e:35:25:a0:3d:2d:02:4e:15:9b:49:a9:29:13:9d:
+                    c6:25:a3:ef:41:b4:09:c6:3b:96:b0:1a:4f:53:2e:
+                    ce:66:a7:73:b0:7d:c3:66:da:d2:00:be:61:3a:ec:
+                    3a:92:bc:d5:c6:8c:ae:e9:71:fb:a1:74:36:43:f6:
+                    a5:1d:bd:82:e8:dc:1a:3f:b1:d1:5b:d4:4b:d7:8e:
+                    f6:5b:42:75:c9:ec:17:43:76:0c:bb:ed:85:3b:ff:
+                    b7:69:a4:f4:4c:36:31:ba:d9:40:03:fa:df:25:64:
+                    b9:a8:ec:ac:a5:95:8b:7d:7f:d6:28:e7:87:2a:4d:
+                    bd:3f:af:0e:0f:25:d3:bd:3e:2f:99:78:2b:4b:3a:
+                    01:aa:75:80:0b:ca:2e:e3:66:ea:ed:e1:b0:b0:40:
+                    7f:58:0e:18:58:10:4d:94:93:3f:40:7a:56:82:4a:
+                    10:22:ec:60:2a:44:f9:db:47:1d:08:7a:64:f9:a7:
+                    92:4d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:1E:05:A3:77:8F:6C:96:E2:5B:87:4B:A6:B4:86:AC:71:00:0C:E7:38
+
+            X509v3 Subject Key Identifier: 
+                79:50:EA:AE:E1:FF:89:1C:98:04:DD:46:B9:1E:3E:AD:72:CF:E4:00
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Certificate Policies: 
+                Policy: 1.3.6.1.4.1.5923.1.4.3.1.1
+                  CPS: https://www.incommon.org/cert/repository/cps_ssl.pdf
+                Policy: 2.23.140.1.2.2
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crl.incommon-rsa.org/InCommonRSAServerCA.crl
+
+            Authority Information Access: 
+                CA Issuers - URI:http://crt.usertrust.com/InCommonRSAServerCA_2.crt
+                OCSP - URI:http://ocsp.usertrust.com
+
+            X509v3 Subject Alternative Name: 
+                DNS:arizona.edu
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 46:A5:55:EB:75:FA:91:20:30:B5:A2:89:69:F4:F3:7D:
+                                11:2C:41:74:BE:FD:49:B8:85:AB:F2:FC:70:FE:6D:47
+                    Timestamp : Jun  2 15:29:29.161 2020 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:80:F5:23:EC:0D:F5:26:32:1B:73:29:
+                                99:10:16:94:8C:A8:85:94:65:47:7B:C2:4D:C7:6F:33:
+                                5A:DB:0B:C7:FB:02:20:32:66:B4:A6:4A:EA:F3:3C:13:
+                                A6:7F:EF:25:B7:6B:C2:C9:CE:E0:3A:96:C2:3E:ED:0B:
+                                9E:07:84:52:B3:4A:76
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : DF:A5:5E:AB:68:82:4F:1F:6C:AD:EE:B8:5F:4E:3E:5A:
+                                EA:CD:A2:12:A4:6A:5E:8E:3B:12:C0:20:44:5C:2A:73
+                    Timestamp : Jun  2 15:29:29.218 2020 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:C7:7C:9B:4D:8A:B7:9D:A6:33:C4:A5:
+                                4C:80:A4:80:DB:34:F7:11:92:23:6B:C5:01:22:A8:8B:
+                                29:B4:F2:08:47:02:20:1E:95:FE:B0:13:2C:69:FB:A3:
+                                97:CB:B1:3E:68:65:AD:26:A5:61:20:7F:73:9D:58:36:
+                                E7:F7:92:E8:F0:9C:B5
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 6F:53:76:AC:31:F0:31:19:D8:99:00:A4:51:15:FF:77:
+                                15:1C:11:D9:02:C1:00:29:06:8D:B2:08:9A:37:D9:13
+                    Timestamp : Jun  2 15:29:29.154 2020 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:DF:6C:B8:9A:08:ED:1C:4B:6A:2D:E2:
+                                D2:84:79:58:C5:36:96:DA:45:A2:4C:63:9F:D6:50:5D:
+                                03:1E:88:45:C2:02:20:62:AD:DC:CC:7A:4F:AF:96:40:
+                                16:BB:5F:09:C1:4B:F3:DA:40:DC:4A:8A:07:E4:50:D2:
+                                79:D9:A2:98:85:32:75
+    Signature Algorithm: sha256WithRSAEncryption
+         56:0d:27:1b:4b:80:e3:c9:4e:09:bc:d6:39:0a:1c:f3:5b:3c:
+         53:a5:c8:49:67:ca:46:38:25:9a:6a:29:73:00:e0:12:13:1d:
+         43:1f:bc:da:3b:60:9a:62:00:f0:23:e0:4f:89:ae:4d:88:39:
+         9f:42:cd:59:65:53:e0:ec:0f:4c:f4:34:98:2c:69:f6:7a:62:
+         6e:51:65:d3:d4:27:0b:70:d4:76:5c:6f:6b:6c:25:b6:b8:0e:
+         c7:ce:73:da:8f:14:26:f5:64:10:5d:07:ec:76:90:a6:b5:c5:
+         e5:d1:25:82:98:fd:6f:a2:a8:16:2d:a5:e8:ae:f0:3d:3d:81:
+         73:c7:5b:35:40:35:7d:0b:12:97:62:30:e0:a8:3f:c0:36:89:
+         4b:72:29:ad:cb:49:5c:75:5a:2c:fe:84:aa:63:07:d6:66:d8:
+         a1:99:55:2a:57:88:7a:48:e6:a6:e7:30:78:0b:41:75:cc:b8:
+         9f:6f:6d:cc:d1:d8:2f:c4:20:1e:a6:a0:1d:24:f2:b6:af:3c:
+         cf:db:f2:a9:6a:c1:df:38:d4:ae:0f:c1:95:72:04:73:cd:74:
+         2c:5f:41:b4:2e:90:ec:14:b2:6b:55:71:90:95:ac:a7:a9:b1:
+         46:5c:03:f3:1b:1b:b3:7d:dd:65:48:fb:69:ca:83:33:5f:25:
+         3a:0c:96:a5

@@ -1,0 +1,105 @@
+#!/bin/sh
+####################################
+# Task 1: Deriving the Private Key
+#################
+# p = F7E75FDC469067FFDC4E847C51F452DF
+# q = E85CED54AF57E53E092113E62F436F4F
+# e = 0D88C3
+echo "==============================="
+echo "Task1: Deriving the Private Key"
+p="F7E75FDC469067FFDC4E847C51F452DF"
+q="E85CED54AF57E53E092113E62F436F4F"
+e="0D88C3"
+gcc -o task1 task1.c -lcrypto && ./task1 $p $q $e
+# output: 3587A24598E5F2A21DB007D89D18CC50ABA5075BA19A33890FE7C28A9B496AEB
+
+####################################
+# Task 2: Encrypting a Message
+#################
+echo "==============================="
+echo "Task 2: Encrypting a Message"
+M=$(python -c 'print("A top secret!".encode("utf-8").hex())')
+e="010001"
+n="DCBFFE3E51F62E09CE7032E2677A78946A849DC4CDDE3A4D0CB81629242FB1A5"
+d="74D806F9F3A62BAE331FFE3F0A68AFE35B3D2E4794148AACBC26AA381CD7D30D"
+gcc -o task2 task2.c -lcrypto && ./task2 $M $e $n
+# output: 52D4873403EC29755906A6347CC57EF1B2ADAC990C05F1B7EFC3F34BCA49842F
+
+####################################
+# Task 3:Decrypting a Message
+#################
+echo "==============================="
+echo "Task 3: Decrypting a Message"
+C="8C0F971DF2F3672B28811407E2DABBE1DA0FEBBBDFC7DCB67396567EA1E2493F"
+gcc -o task3 task3.c -lcrypto && ./task3 $C $d $n
+# output: 50617373776F72642069732064656573 (Password is dees)
+
+####################################
+# Task 4: Signing a Message
+#################
+echo "==============================="
+echo "Task 4: Signing a Message"
+M1=$(python -c 'print("I owe you $2000.".encode("utf-8").hex())')
+M2=$(python -c 'print("I owe you $3000.".encode("utf-8").hex())')
+echo '1) signing <I owe you $2000.>'
+gcc -o task4 task4.c -lcrypto && ./task4 $M1 $d $n # decryption operation to sign
+echo '2) signing <I owe you $3000.>'
+gcc -o task4 task4.c -lcrypto && ./task4 $M2 $d $n
+
+####################################
+# Task 5: Verifying a Signature
+echo "==============================="
+echo "Task 5: Verifying a Signature"
+M=$(python -c 'print("Launch a missle.".encode("utf-8").hex())')
+S='643D6F34902D9C7EC90CB0B2BCA36C47FA37165C0005CAB026C0542CBDB6802F'
+e='010001'
+n='AE1CD4DC432798D933779FBD46C6E1247F0CF1233595113AA51B450F18116115'
+gcc -o task5 task5.c -lcrypto && ./task5 $M $S $e $n # encryption operation to verify
+
+echo "after the last bits data changes from <2F> to <3F>"
+S='643D6F34902D9C7EC90CB0B2BCA36C47FA37165C0005CAB026C0542CBDB6803F'
+./task5 $M $S $e $n # encryption operation to verify
+
+####################################
+# Task 6: Manually Verifying an X.509 Certificate
+echo "==============================="
+echo "Task 6: Manually Verifying an X.509 Certificate"
+# openssl x509 -in c1.pem -noout -modulus
+# openssl x509 -in c1.pem -text -noout
+# openssl x509 -in c1.pem -text -noout
+
+
+# 获取起始偏移为 4 的 field
+# openssl asn1parse -i -in cc0.pem -strparse 4 -out cc0_body.bin -noout
+
+
+cc0_n='AC0CF548619B14F2E2E8D67235A54A0D69C402B66EAE0EB32444D7C43EC667F61F607C090A2C74D80BB7E51EC5325DD28FCE2D58C5A9FB57D52EB4035524315799832730C908309CC88C6E3525A03D2D024E159B49A929139DC625A3EF41B409C63B96B01A4F532ECE66A773B07DC366DAD200BE613AEC3A92BCD5C68CAEE971FBA1743643F6A51DBD82E8DC1A3FB1D15BD44BD78EF65B4275C9EC1743760CBBED853BFFB769A4F44C3631BAD94003FADF2564B9A8ECACA5958B7D7FD628E7872A4DBD3FAF0E0F25D3BD3E2F99782B4B3A01AA75800BCA2EE366EAEDE1B0B0407F580E1858104D94933F407A56824A1022EC602A44F9DB471D087A64F9A7924D'
+cc0_e='10001'
+cc0_hash='30b8e177f6a24835fc21df98ac41a7a91d2ac4a5172f4ee5050f489e9412e79d'
+cc0_signature='560d271b4b80e3c94e09bcd6390a1cf35b3c53a5c84967ca4638259a6a297300e012131d431fbcda3b609a6200f023e04f89ae4d88399f42cd596553e0ec0f4cf434982c69f67a626e5165d3d4270b70d4765c6f6b6c25b6b80ec7ce73da8f1426f564105d07ec7690a6b5c5e5d1258298fd6fa2a8162da5e8aef03d3d8173c75b3540357d0b12976230e0a83fc036894b7229adcb495c755a2cfe84aa6307d666d8a199552a57887a48e6a6e730780b4175ccb89f6f6dccd1d82fc4201ea6a01d24f2b6af3ccfdbf2a96ac1df38d4ae0fc195720473cd742c5f41b42e90ec14b26b55719095aca7a9b1465c03f31b1bb37ddd6548fb69ca83335f253a0c96a5'
+gcc -o task6 task6.c -lcrypto && ./task6 $cc0_signature $cc0_e $cc0_n # encryption operation to verify
+echo "correct hash for comparision: "  $cc0_hash
+# cc0_hash = 
+
+# c1_n='C14BB3654770BCDD4F58DBEC9CEDC366E51F311354AD4A66461F2C0AEC6407E52EDCDCB90A20EDDFE3C4D09E9AA97A1D8288E51156DB1E9F58C251E72C340D2ED292E156CBF1795FB3BB87CA25037B9A52416610604F571349F0E8376783DFE7D34B674C2251A6DF0E9910ED57517426E27DC7CA622E131B7F238825536FC13458008B84FFF8BEA75849227B96ADA2889B15BCA07CDFE951A8D5B0ED37E236B4824B62B5499AECC767D6E33EF5E3D6125E44F1BF71427D58840380B18101FAF9CA32BBB48E278727C52B74D4A8D697DEC364F9CACE53A256BC78178E490329AEFB494FA415B9CEF25C19576D6B79A72BA2272013B5D03D40D321300793EA99F5'
+# c0_n='955D96639AE51A7D5FA70BEE0618F49D505C3710B1907506FE9246E07BDA25E9FB60867598B73BFCFE2C9CE2598847F05854E290735B71409C622286F0990579B64E60C73553D3E212D556194E24B98BB1897A43F2830F8A7D41D1282B17B80A7CED7FFC8DB0789740523819B970423C0961CF61271DD7735D4B709BD5EE38B3BF63A2C04D532C6E9F3F9579DFA3F6D7D14809EC2D1A56A3AED3B03456BE8E90FC705A63AF1777112A154233B538079D4A2BE22C5912E6F1C556D486978F0846CD6EC147A108DECC424385A773A1D53D2826A262D65969081853C0C1C594078342D76CA108EE625BF77134C58D2CC455B67640CAAE85A59F3014AEA3E0E33033'
+# c1_e='10001'
+# c0_e='10001'
+# c0_signature='aa9fbe5d911bade44e4ecc8f07644435b4ad3b133fc129d8b4abf3425149463bd6cf1e4183e10b572f83697965076f59038c51948918103e1e5cedba3d8e4f1a1492d32bffd498cba7930ebcb71b93a4424246d9e5b11a6b682a9b2e48a92f1d2ab0e3f820945481502eeed7e0207a7b2e67fbfad817a45bdcca0062ef23af7a58f07a740cbd4d43f18c0287dce3ae09d2f7fa373cd24bab04e543a5d255110e41875f38a8e57a5e4c46b8b6fa3fc34bcd4035ffe0a471740ac1208be3544784d518bd519b405ddd423012d13aa5639aaf9008d61bd1710b067190ebaeadafba5fc7db6b1e78a2b4d10623a763f3b543fa568c50177b1c1b4e106b220e845294'
+# gcc -o task6 task6.c -lcrypto && ./task6 $c0_signature $c1_e $c1_n # encryption operation to verify
+# # gcc -o task6 task6.c -lcrypto && ./task6 $c0_signature $c0_e $c0_n # encryption operation to verify
+
+
+
+
+# ###########
+# openssl s_client -connect www.example.org:443 -showcerts > aaa.txt
+
+# openssl x509 -in c1.pem -noout -modulus
+# openssl x509 -in c1.pem -text -noout > c1-field.txt
+# openssl x509 -in c0.pem -text -noout > c0-field.txt
+# openssl x509 -i -in c0.pem > c0_parsed.txt
+# openssl asn1parse -i -in c0.pem -strparse 4 -out c0_body.bin -noout
+# sha256sum c0_body.bin > c0_hash.txt
+# 003031300D0609608648016503040201050004207061DF0A50B8F2BA3367ECFABAB273A16F3BB1378DBE1FE524E6DFD90DFA3B91
+# 7061df0a50b8f2ba3367ecfabab273a16f3bb1378dbe1fe524e6dfd90dfa3b91

@@ -1,0 +1,151 @@
+###[ Ethernet ]### 
+  dst       = 52:54:00:12:35:02
+  src       = 08:00:27:7d:67:8d
+  type      = 0x800
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0xc0
+     len       = 174
+     id        = 37807
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0x785d
+     src       = 10.0.2.15
+     dst       = 68.105.29.11
+     \options   \
+###[ ICMP ]### 
+        type      = dest-unreach
+        code      = port-unreachable
+        chksum    = 0x6b0f
+        reserved  = 0
+        length    = 0
+        nexthopmtu= 0
+###[ IP in ICMP ]### 
+           version   = 4
+           ihl       = 5
+           tos       = 0x0
+           len       = 146
+           id        = 26986
+           flags     = 
+           frag      = 0
+           ttl       = 64
+           proto     = udp
+           chksum    = 0xa36e
+           src       = 68.105.29.11
+           dst       = 10.0.2.15
+           \options   \
+###[ UDP in ICMP ]### 
+              sport     = domain
+              dport     = 22835
+              len       = 126
+              chksum    = 0xa406
+###[ DNS ]### 
+                 id        = 52522
+                 qr        = 1
+                 opcode    = QUERY
+                 aa        = 0
+                 tc        = 0
+                 rd        = 1
+                 ra        = 1
+                 z         = 0
+                 ad        = 0
+                 cd        = 0
+                 rcode     = ok
+                 qdcount   = 1
+                 ancount   = 0
+                 nscount   = 1
+                 arcount   = 0
+                 \qd        \
+                  |###[ DNS Question Record ]### 
+                  |  qname     = 's3.amazonaws.com.'
+                  |  qtype     = AAAA
+                  |  qclass    = IN
+                 an        = None
+                 \ns        \
+                  |###[ DNS Resource Record ]### 
+                  |  rrname    = 's3.amazonaws.com.'
+                  |  type      = SOA
+                  |  rclass    = IN
+                  |  ttl       = 200
+                  |  rdlen     = 72
+                  |  rdata     = '\x07ns-1579\tawsdns-05\x02co\x02uk\x00\x11awsdns-hostmaster\x06amazon\xc0\x19\x00\x00\x00\x01\x00\x00\x1c \x00\x00\x03\x84\x00\x12u\x00\x00\x00\x01%'
+                 ar        = None
+
+###[ Ethernet ]### 
+  dst       = 52:54:00:12:35:02
+  src       = 08:00:27:7d:67:8d
+  type      = 0x800
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0xc0
+     len       = 154
+     id        = 37752
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0x78a8
+     src       = 10.0.2.15
+     dst       = 68.105.29.11
+     \options   \
+###[ ICMP ]### 
+        type      = dest-unreach
+        code      = port-unreachable
+        chksum    = 0x6afb
+        reserved  = 0
+        length    = 0
+        nexthopmtu= 0
+###[ IP in ICMP ]### 
+           version   = 4
+           ihl       = 5
+           tos       = 0x0
+           len       = 126
+           id        = 27254
+           flags     = 
+           frag      = 0
+           ttl       = 64
+           proto     = udp
+           chksum    = 0xa276
+           src       = 68.105.29.11
+           dst       = 10.0.2.15
+           \options   \
+###[ UDP in ICMP ]### 
+              sport     = domain
+              dport     = 46688
+              len       = 106
+              chksum    = 0x8026
+###[ DNS ]### 
+                 id        = 11198
+                 qr        = 1
+                 opcode    = QUERY
+                 aa        = 0
+                 tc        = 0
+                 rd        = 1
+                 ra        = 1
+                 z         = 0
+                 ad        = 0
+                 cd        = 0
+                 rcode     = name-error
+                 qdcount   = 1
+                 ancount   = 0
+                 nscount   = 1
+                 arcount   = 0
+                 \qd        \
+                  |###[ DNS Question Record ]### 
+                  |  qname     = 'local.'
+                  |  qtype     = SOA
+                  |  qclass    = IN
+                 an        = None
+                 \ns        \
+                  |###[ DNS Resource Record ]### 
+                  |  rrname    = '.'
+                  |  type      = SOA
+                  |  rclass    = IN
+                  |  ttl       = 746
+                  |  rdlen     = 64
+                  |  rdata     = '\x01a\x0croot-servers\x03net\x00\x05nstld\x0cverisign-grs\x03com\x00x\x85\xe8\xc9\x00\x00\x07\x08\x00\x00\x03\x84\x00\t:\x80\x00\x01Q\x80'
+                 ar        = None
